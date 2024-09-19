@@ -1,0 +1,535 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+html {
+  background-color: #735071;
+}
+
+/* Kallar på Google fonts så att "Bricolage Grotesque" används (primärt) */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url(BricolageGrotesque-VariableFont_opszwdthwght.ttf) format("ttf");
+}
+
+/* Gridsystem för containern som omsluter webbsidans innehåll */
+.container {
+  display: grid;
+  gap: 0.2rem;
+  grid-template-columns: 0.4fr repeat(3, 1fr);
+  grid-template-rows: 0.2fr repeat(1, 2fr) 0.2fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "aside article article article"
+    "footer footer footer footer";
+  min-height: 100vh;
+}
+
+/* Styling och utformning av navigationsmenyn i webbsidans "header" */
+nav {
+  background-color: #eae1df;
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  padding-left: 2rem;
+}
+
+#logo {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #735071;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+label {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-list {
+  display: none;
+}
+
+#navlist {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+#navlist a {
+  padding: 0 0.5em;
+  font-size: 1.2rem;
+}
+
+#navlist a:hover {
+  color: #bc6c25;
+}
+
+.active {
+  color: #bc6c25;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #343a40;
+}
+
+/* Gridsystem för webbsidans article-element där album sedan placeras i vardera ruta */
+article {
+  background-color: #eae1df;
+  background-image: url(media/article-background.jpg);
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  grid-area: article;
+  display: grid;
+  gap: 0.2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "album1 album2 album3 album4"
+    "album5 album6 album7 album8";
+}
+
+/* Styling av album-divs */
+.albumcoverImg {
+  box-shadow: 10px 10px 43px 18px rgba(0, 0, 0, 0.5);
+}
+
+.imgWrapper {
+  position: relative;
+  height: 80%;
+  width: 80%;
+}
+
+.imgWrapper img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imgWrapper img:hover {
+  transform: scale(1.1);
+  filter: blur(2px);
+  cursor: pointer;
+}
+
+.albumInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  width: 70%;
+  height: auto;
+}
+
+.imgWrapper:hover .albumInfo {
+  opacity: 1;
+}
+
+#album1 {
+  grid-area: album1;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-image: url(media/albumcoverBlurred.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#album2 {
+  grid-area: album2;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-image: url(media/albumcover2Blurred.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#album3 {
+  grid-area: album3;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-image: url(media/albumcover3Blurred.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#album4 {
+  grid-area: album4;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-image: url(media/albumcover4Blurred.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#album5 {
+  grid-area: album5;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-image: url(media/albumcover5Blurred.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#album6 {
+  grid-area: album6;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-image: url(media/albumcover6Blurred.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#album7 {
+  grid-area: album7;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-image: url(media/albumcover7Blurred.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#album8 {
+  grid-area: album8;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-image: url(media/albumcover8Blurred.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling av aside-"menyn" */
+aside {
+  background-color: #eae1df;
+  grid-area: aside;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-top: 2rem;
+}
+
+/* Rolig grej som endast syns i web-view */
+#leaningMan {
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: auto;
+}
+
+#asideList {
+  color: #343a40;
+  list-style-type: none;
+  line-height: 1.5;
+  padding-left: 2rem;
+}
+
+#asideList li {
+  margin: 0;
+}
+
+.listItems a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #343a40;
+  line-height: 1.5;
+  transition: transform 0.3s ease;
+}
+
+#asideList a:hover {
+  transform: translateX(10px);
+  font-weight: bold;
+  text-decoration: wavy underline;
+  color: #bc6c25;
+}
+
+.listTitles {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #735071;
+}
+
+/* Styling av footer och dess innehåll */
+footer {
+  background-color: #eae1df;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#footer-info {
+  padding-left: 2rem;
+}
+
+.footerIcons {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerImg {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.footerImg:hover {
+  transform: scale(1.2);
+}
+
+.footerIcons img {
+  margin: 0 20px;
+}
+
+/* Mediaquery för skärmar mindre än 500px i bredd */
+@media only screen and (min-width: 360px) and (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr repeat(8, 1fr) 0.2fr;
+    grid-template-areas:
+      "nav"
+      "article"
+      "article"
+      "article"
+      "article"
+      "article"
+      "article"
+      "article"
+      "article"
+      "footer";
+    height: 100%;
+  }
+
+  nav {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  nav a {
+    color: #343a40;
+  }
+
+  nav .active {
+    color: #bc6c25;
+  }
+
+  #logo {
+    color: #343a40;
+  }
+
+  label {
+    display: block;
+  }
+
+  #navlist {
+    padding-top: 20px;
+    margin-top: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.2em;
+    position: absolute;
+    left: -100%;
+    background-color: #eae1df;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    top: 71px;
+    width: 100%;
+    height: calc(100vh - 71px);
+    transition: 0.3s ease;
+    z-index: 1;
+  }
+
+  .mobile-list {
+    display: block;
+  }
+
+  input[type="checkbox"]:checked ~ #navlist {
+    left: 0;
+  }
+
+  article {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "album1"
+      "album2"
+      "album3"
+      "album4"
+      "album5"
+      "album6"
+      "album7"
+      "album8";
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-image: url(media/article-background-mobile.jpg);
+    background-position: center;
+  }
+
+  #album1,
+  #album2,
+  #album3,
+  #album4,
+  #album5,
+  #album6,
+  #album7,
+  #album8 {
+    width: 272px;
+    height: 272px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .albumInfo h2 {
+    font-size: 1rem;
+  }
+
+  aside {
+    display: none;
+  }
+
+  #leaningMan {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  #footer-info {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  article {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "album1 album2"
+      "album3 album4"
+      "album5 album6"
+      "album7 album8";
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #album1,
+  #album2,
+  #album3,
+  #album4,
+  #album5,
+  #album6,
+  #album7,
+  #album8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    width: 30vh;
+    margin-bottom: 20px;
+  }
+
+  #leaningMan {
+    display: none;
+  }
+
+  #asideList {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .albumInfo {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .albumInfo h2 {
+    font-size: 1.3em;
+  }
+
+  .albumInfo p {
+    font-size: 1em;
+  }
+}
+
+/* Validerad 2024-09-18 via W3 Validator
+   Bilder komprimerade från 1.38 MB -> 509 KB (64% minskning) */

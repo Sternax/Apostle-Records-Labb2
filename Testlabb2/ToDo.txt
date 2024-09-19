@@ -1,0 +1,25 @@
+* Brainstorma en idé till sidans "kund"
+* Fundera över fergval och kontraster för bättre tillgänglighet/visibilitet
+
+* Skapa ett gridsystem för större och mindre skärmar (web och mobile)
+* Attribuera de Olika sektionerna till grid-areas
+* Stilsätt sektionerna för tydligare bild av sidans layout
+* Fyll sektionerna (header, article osv) med innehåll
+* Anpassa innehållets storlek och still för att fungera både för webb och mobil
+
+KRAV ATT UPPFYLLA
+* Media query
+* Class och ID-selektorer
+* Flexbox och/eller grid-layout
+* HTML5-strukturelement t.ex article
+* Title och Description
+* Felfri validering (W3)
+
+VG KRAV
+
+* Semantisk HTML (passande HTML-element för innehållet)
+* Enhetlig formatering och struktur
+* En väljare utöver class, ID och type (t.ex. :first-child)
+* Beskrivande namngivning av element (class, ID)
+
+  

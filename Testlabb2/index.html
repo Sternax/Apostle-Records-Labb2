@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Apostle Records Record Label" />
+    <meta name="keywords" content="Record Label, Artists, Music, Label" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet för "hamburgaren" i navbaren -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Apostle Records</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar med "hamburgare" som endast syns i mobile view -->
+      <nav>
+        <a id="logo" href="index.html">Apostle Records</a>
+        <input type="checkbox" name="hamburger" id="hamburger" />
+        <label for="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <ul id="navlist">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Who Are We?</a></li>
+
+          <!-- Menyalternativ som endast syns i mobile view -->
+          <li class="mobile-list"><a href="#">Artists</a></li>
+          <li class="mobile-list"><a href="#">Locations</a></li>
+          <li class="mobile-list"><a href="#">Join Us</a></li>
+          <li class="mobile-list"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <article>
+        <!-- Varje album har en egen div med bild och text -->
+        <div id="album1">
+          <div class="imgWrapper">
+            <img
+              class="albumcoverImg"
+              src="media/albumcover.jpg"
+              alt="albumcover"
+            />
+            <div class="albumInfo">
+              <h2>Cherry</h2>
+              <p>Kanwan</p>
+            </div>
+          </div>
+        </div>
+        <div id="album2">
+          <div class="imgWrapper">
+            <img
+              class="albumcoverImg"
+              src="media/albumcover2.jpg"
+              alt="albumcover"
+            />
+            <div class="albumInfo">
+              <h2>Orange</h2>
+              <p>Mike Mako</p>
+            </div>
+          </div>
+        </div>
+        <div id="album3">
+          <div class="imgWrapper">
+            <img
+              class="albumcoverImg"
+              src="media/albumcover3.jpg"
+              alt="albumcover"
+            />
+            <div class="albumInfo">
+              <h2>Coconut</h2>
+              <p>The Wombats</p>
+            </div>
+          </div>
+        </div>
+        <div id="album4">
+          <div class="imgWrapper">
+            <img
+              class="albumcoverImg"
+              src="media/albumcover4.jpg"
+              alt="albumcover"
+            />
+            <div class="albumInfo">
+              <h2>Pineapple</h2>
+              <p>Adeno</p>
+            </div>
+          </div>
+        </div>
+        <div id="album5">
+          <div class="imgWrapper">
+            <img
+              class="albumcoverImg"
+              src="media/albumcover5.jpg"
+              alt="albumcover"
+            />
+            <div class="albumInfo">
+              <h2>Dragonfruit</h2>
+              <p>Edimois</p>
+            </div>
+          </div>
+        </div>
+        <div id="album6">
+          <div class="imgWrapper">
+            <img
+              class="albumcoverImg"
+              src="media/albumcover6.jpg"
+              alt="albumcover"
+            />
+            <div class="albumInfo">
+              <h2>Apple</h2>
+              <p>Aubrey Thrive</p>
+            </div>
+          </div>
+        </div>
+        <div id="album7">
+          <div class="imgWrapper">
+            <img
+              class="albumcoverImg"
+              src="media/albumcover7.jpg"
+              alt="albumcover"
+            />
+            <div class="albumInfo">
+              <h2>Passionfruit</h2>
+              <p>Weasley Brothers</p>
+            </div>
+          </div>
+        </div>
+        <div id="album8">
+          <div class="imgWrapper">
+            <img
+              class="albumcoverImg"
+              src="media/albumcover8.jpg"
+              alt="albumcover"
+            />
+            <div class="albumInfo">
+              <h2>Mango</h2>
+              <p>Edna White</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <aside>
+        <!-- Lista som endast visas i web-view och ersätts av fler alternativ som visas i "hamburgarmenyn" i mobile view -->
+        <ul id="asideList">
+          <li class="listTitles">Artists</li>
+          <li class="listItems">
+            <a class="listLinks" href="#">International</a>
+          </li>
+          <li class="listItems"><a class="listLinks" href="#">Domestic</a></li>
+          <li class="listItems">
+            <a class="listLinks" href="#">Up and Coming</a>
+          </li>
+
+          <li class="listTitles">Locations</li>
+          <li class="listItems"><a class="listLinks" href="#">Stockholm</a></li>
+          <li class="listItems">
+            <a class="listLinks" href="#">Gothenburg</a>
+          </li>
+          <li class="listItems"><a class="listLinks" href="#">New York</a></li>
+
+          <li class="listTitles">Join Us</li>
+          <li class="listItems"><a class="listLinks" href="#">Sign Up</a></li>
+          <li class="listItems">
+            <a class="listLinks" href="#">Terms & Conditions</a>
+          </li>
+          <li class="listItems"><a class="listLinks" href="#">Benefits</a></li>
+
+          <li class="listTitles">Contact</li>
+          <li class="listItems">
+            <a class="listLinks" href="#">Technical</a>
+          </li>
+          <li class="listItems">
+            <a class="listLinks" href="#">General</a>
+          </li>
+          <li class="listItems"><a class="listLinks" href="#">Chat</a></li>
+        </ul>
+
+        <img id="leaningMan" src="media/man.png" alt="leaningMan" />
+      </aside>
+      <footer>
+        <!-- Iconer som agerar som länkar till Apostle Records sociala medier -->
+        <div class="footerIcons">
+          <a href="#"
+            ><img class="footerImg" src="media/instagram.png" alt="instagram"
+          /></a>
+          <a href="#"
+            ><img class="footerImg" src="media/facebook.png" alt="facebook"
+          /></a>
+          <a href="#"
+            ><img class="footerImg" src="media/twitter.png" alt="twitter/X"
+          /></a>
+          <a href="#"
+            ><img class="footerImg" src="media/whatsapp.png" alt="whatsapp"
+          /></a>
+        </div>
+
+        <div id="footer-info">
+          <p>Apostle Records 2024© Albumgatan 47, Stockholm</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!-- Validerad 2024-09-18 via W3 Validator -->
